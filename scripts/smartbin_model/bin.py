@@ -1,126 +1,83 @@
+# bin.py
 import datetime
 import json
 import random
 import time
+from suburb_model.house import House
+from suburb_model.location import Location
 
 class bin:
     """
-    A class to simulate data generation for a single smart dustbin.
-
-    This class is designed to be decoupled, allowing it to be used
-    independently in various projects for testing or simulation purposes.
-    It generates data points resembling those from a real smart bin sensor.
+    A class to simulate data generation for a single smart dustbin,
+    associated with a specific house.
     """
 
-    def __init__(self,
-                 bin_id: str,
-                 latitude: float,
-                 longitude: float,
-                 initial_fill_level: float = 0.0,
-                 fill_rate_per_hour: float = 1.0, # Average percentage points increase per hour
-                 update_interval_seconds: int = 60, # How often data is generated
-                 initial_status: str = "online",
-                 initial_temperature_celsius: float = 20.0,
-                 fill_variation_percentage: float = 0.5, # Max random variation in fill per interval
-                 temp_variation_celsius: float = 0.2 # Max random variation in temp per interval
-                ):
+    def __init__(
+        self,
+        bin_id: str,
+        house: House,  # Changed: Takes a House object
+        initial_fill_level: float = 0.0,
+        fill_rate_per_hour: float = 1.0,
+        update_interval_seconds: int = 60,
+        initial_status: str = "online",
+        initial_temperature_celsius: float = 20.0,
+        fill_variation_percentage: float = 0.5,
+        temp_variation_celsius: float = 0.2,
+    ):
         """
-        Initializes the bin for a specific bin.
-
-        Parameters:
-            bin_id (str): A unique identifier for the bin.
-            latitude (float): The geographical latitude of the bin's location.
-            longitude (float): The geographical longitude of the bin's location.
-            initial_fill_level (float): Starting fill level percentage (0.0 to 100.0).
-                                        Defaults to 0.0.
-            fill_rate_per_hour (float): The average rate at which the bin fills
-                                        in percentage points per hour. Defaults to 1.0.
-            update_interval_seconds (int): The time interval in seconds between
-                                           generated data points. Defaults to 60 (1 minute).
-            initial_status (str): The initial operational status of the bin.
-                                  Defaults to "online".
-            initial_temperature_celsius (float): The initial temperature inside the bin.
-                                                 Defaults to 20.0.
-            fill_variation_percentage (float): Maximum random percentage points
-                                               to add/subtract to fill level per interval.
-                                               Defaults to 0.5.
-            temp_variation_celsius (float): Maximum random degrees Celsius to add/subtract
-                                            to temperature per interval. Defaults to 0.2.
+        Initializes the bin with a House object.
         """
-        if not 0.0 <= initial_fill_level <= 100.0:
-            raise ValueError("initial_fill_level must be between 0.0 and 100.0")
-        if update_interval_seconds <= 0:
-             raise ValueError("update_interval_seconds must be positive")
-
-        self._bin_id = bin_id
-        self._latitude = latitude
-        self._longitude = longitude
-        self._fill_level = initial_fill_level
-        self._fill_rate_per_second = fill_rate_per_hour / 3600.0 # Convert rate to per second
+        self.bin_id = bin_id
+        self.house = house  # Store the House object
+        self._fill_level_percentage = initial_fill_level
+        self._fill_rate_per_hour = fill_rate_per_hour
         self._update_interval_seconds = update_interval_seconds
         self._status = initial_status
         self._temperature_celsius = initial_temperature_celsius
         self._fill_variation_percentage = fill_variation_percentage
         self._temp_variation_celsius = temp_variation_celsius
 
-        self._last_update_time = datetime.datetime.now(datetime.timezone.utc)
-
     def generate_data_point(self) -> dict:
         """
-        Generates a single simulated data point for the bin based on the
-        current state and time elapsed.
-
-        Simulates the fill level increasing over time with some random variation,
-        and also simulates temperature variation.
-
-        Returns:
-            dict: A dictionary containing the simulated bin data in a
-                  JSON-like structure.
+        Generates a simulated data point for the smart bin.
         """
-        current_time = datetime.datetime.now(datetime.timezone.utc)
-        time_elapsed = (current_time - self._last_update_time).total_seconds()
-
-        # Simulate fill level increase with variation
-        fill_increase = time_elapsed * self._fill_rate_per_second
-        random_fill_variation = random.uniform(-self._fill_variation_percentage, self._fill_variation_percentage)
-        self._fill_level += fill_increase + random_fill_variation
-
-        # Ensure fill level stays within 0 and 100
-        self._fill_level = max(0.0, min(100.0, self._fill_level))
-
-        # Simulate temperature variation
-        random_temp_variation = random.uniform(-self._temp_variation_celsius, self._temp_variation_celsius)
-        self._temperature_celsius += random_temp_variation
-
-        # Update the last update time
-        self._last_update_time = current_time
-
-        # Construct the data payload
-        data_payload = {
-            "binId": self._bin_id,
-            "timestamp": current_time.isoformat(),
-            "location": {
-                "latitude": self._latitude,
-                "longitude": self._longitude
-            },
-            "fillLevelPercentage": round(self._fill_level, 2), # Round for cleaner output
+        timestamp = datetime.datetime.utcnow().isoformat() + "Z"
+        # Get location from the associated house
+        location = self.house.get_location().to_dict()  
+        self._fill_level_percentage = min(
+            100.0,
+            max(
+                0.0,
+                self._fill_level_percentage
+                + self._fill_rate_per_hour * (self._update_interval_seconds / 3600)
+                + random.uniform(
+                    -self._fill_variation_percentage, self._fill_variation_percentage
+                ),
+            ),
+        )
+        self._temperature_celsius += random.uniform(
+            -self._temp_variation_celsius, self._temp_variation_celsius
+        )
+        return {
+            "binId": self.bin_id,
+            "timestamp": timestamp,
+            "location": location,
+            "fillLevelPercentage": round(self._fill_level_percentage, 2),
             "status": self._status,
-            "temperatureCelsius": round(self._temperature_celsius, 2) # Round for cleaner output
+            "temperatureCelsius": round(self._temperature_celsius, 2),
         }
 
-        return data_payload
-
     def get_bin_id(self) -> str:
-        """Returns the unique identifier of the bin."""
-        return self._bin_id
+        """Returns the bin's unique ID."""
+        return self.bin_id
 
-    def get_location(self) -> tuple[float, float]:
-        """Returns the location of the bin as a tuple (latitude, longitude)."""
-        return (self._latitude, self._longitude)
+    def get_location(self) -> Location:
+        """Returns the bin's Location object."""
+        return self.house.get_location()  # Get location from house
 
-    def get_current_fill_level(self) -> float:
-        """Returns the current simulated fill level percentage."""
-        return self._fill_level
+    def get_house(self) -> House:
+        """Returns the House object associated with the bin."""
+        return self.house
 
     def get_status(self) -> str:
         """Returns the current simulated status of the bin."""
@@ -130,27 +87,31 @@ class bin:
         """Sets the simulated status of the bin."""
         self._status = status
 
-# Example Usage (can be run directly for testing)
 if __name__ == "__main__":
-    # Create a simulator for a bin in Melbourne
+    # Example Usage (can be run directly for testing)
+    # Create location and house first
+    example_loc = Location(-37.8136, 144.9631)
+    example_house = House("1 Example St", example_loc, "house_example")
+
+    # Create a simulator for a bin associated with the house
     melbourne_bin_simulator = bin(
         bin_id="MEL-CBD-001",
-        latitude=-37.8136,
-        longitude=144.9631,
+        house=example_house,  # Pass the house object
         initial_fill_level=10.0,
-        fill_rate_per_hour=5.0, # Fills relatively quickly for demonstration
-        update_interval_seconds=5 # Generate data every 5 seconds
+        fill_rate_per_hour=5.0,
+        update_interval_seconds=5,
     )
 
     print(f"Starting simulation for Bin ID: {melbourne_bin_simulator.get_bin_id()}")
+    print(f"Associated House: {melbourne_bin_simulator.get_house()}")
     print(f"Location: {melbourne_bin_simulator.get_location()}")
 
     try:
         # Generate data points over a short period
         for i in range(10):
             data_point = melbourne_bin_simulator.generate_data_point()
-            print(json.dumps(data_point, indent=2)) # Print as formatted JSON
-            time.sleep(melbourne_bin_simulator._update_interval_seconds) # Wait for the next interval
+            print(json.dumps(data_point, indent=2))
+            time.sleep(melbourne_bin_simulator._update_interval_seconds)
 
         # Simulate a status change
         melbourne_bin_simulator.set_status("low battery")
@@ -158,5 +119,5 @@ if __name__ == "__main__":
         data_point = melbourne_bin_simulator.generate_data_point()
         print(json.dumps(data_point, indent=2))
 
-    except KeyboardInterrupt:
-        print("\nSimulation stopped manually.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
