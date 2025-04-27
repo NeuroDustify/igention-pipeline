@@ -13,6 +13,7 @@ try:
     from scripts import generate_bin_data
     from scripts import generate_suburb_data
     from mqtt_publisher import publish_suburb_data
+    from mqtt_publisher import publish_bin_data
     from mqtt_subscriber import subscribe_data  # Import the subscriber
 except ImportError as e:
     print(f"Error importing project modules: {e}")
@@ -48,7 +49,7 @@ def main():
             print("\nSuburb Data Generator finished.")
         elif choice == '3':
             print("\nStarting MQTT Publisher...")
-            publish_suburb_data.main()
+            publish_bin_data.main()
             print("\nMQTT Publisher finished.")
         elif choice == '4':
             print("\nStarting MQTT Subscriber...")
