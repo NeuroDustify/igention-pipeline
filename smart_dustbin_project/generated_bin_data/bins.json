@@ -1,112 +1,112 @@
 [
     {
         "binId": "BIN-001",
-        "timestamp": "2025-04-26T17:51:03.927489+00:00",
+        "timestamp": "2025-04-27T03:58:20.090625+00:00",
         "location": {
-            "latitude": -37.811641436377116,
-            "longitude": 144.95997814417512
+            "latitude": -37.815886325731285,
+            "longitude": 144.9736317879545
         },
-        "fillLevelPercentage": 19.5,
+        "fillLevelPercentage": 6.89,
         "status": "online",
-        "temperatureCelsius": 22.55
+        "temperatureCelsius": 21.29
     },
     {
         "binId": "BIN-002",
-        "timestamp": "2025-04-26T17:51:03.927610+00:00",
+        "timestamp": "2025-04-27T03:58:20.090729+00:00",
         "location": {
-            "latitude": -37.80214930048807,
-            "longitude": 144.95025975163185
+            "latitude": -37.80258745044317,
+            "longitude": 144.96782802921052
         },
-        "fillLevelPercentage": 18.64,
+        "fillLevelPercentage": 14.05,
         "status": "online",
-        "temperatureCelsius": 24.58
+        "temperatureCelsius": 17.72
     },
     {
         "binId": "BIN-003",
-        "timestamp": "2025-04-26T17:51:03.927631+00:00",
+        "timestamp": "2025-04-27T03:58:20.090756+00:00",
         "location": {
-            "latitude": -37.80754757534763,
-            "longitude": 144.95540967260075
+            "latitude": -37.810715746854946,
+            "longitude": 144.9743969270848
         },
-        "fillLevelPercentage": 6.05,
+        "fillLevelPercentage": 16.12,
         "status": "online",
-        "temperatureCelsius": 23.35
+        "temperatureCelsius": 23.46
     },
     {
         "binId": "BIN-004",
-        "timestamp": "2025-04-26T17:51:03.927647+00:00",
+        "timestamp": "2025-04-27T03:58:20.090777+00:00",
         "location": {
-            "latitude": -37.80760591834509,
-            "longitude": 144.9696421777418
+            "latitude": -37.80372396226281,
+            "longitude": 144.9707325694551
         },
-        "fillLevelPercentage": 3.31,
+        "fillLevelPercentage": 7.13,
         "status": "online",
-        "temperatureCelsius": 15.85
+        "temperatureCelsius": 20.13
     },
     {
         "binId": "BIN-005",
-        "timestamp": "2025-04-26T17:51:03.927664+00:00",
+        "timestamp": "2025-04-27T03:58:20.090794+00:00",
         "location": {
-            "latitude": -37.81530183829108,
-            "longitude": 144.95741800135022
+            "latitude": -37.80914959900341,
+            "longitude": 144.97024997398265
         },
-        "fillLevelPercentage": 8.87,
+        "fillLevelPercentage": 5.33,
         "status": "online",
-        "temperatureCelsius": 21.32
+        "temperatureCelsius": 19.55
     },
     {
         "binId": "BIN-006",
-        "timestamp": "2025-04-26T17:51:03.927678+00:00",
+        "timestamp": "2025-04-27T03:58:20.090812+00:00",
         "location": {
-            "latitude": -37.81020882813787,
-            "longitude": 144.95318876334932
+            "latitude": -37.80022089433228,
+            "longitude": 144.9456523377014
         },
-        "fillLevelPercentage": 19.31,
+        "fillLevelPercentage": 18.89,
         "status": "online",
-        "temperatureCelsius": 24.34
+        "temperatureCelsius": 24.37
     },
     {
         "binId": "BIN-007",
-        "timestamp": "2025-04-26T17:51:03.927693+00:00",
+        "timestamp": "2025-04-27T03:58:20.090829+00:00",
         "location": {
-            "latitude": -37.80265555176486,
-            "longitude": 144.96922104332376
+            "latitude": -37.807955321794104,
+            "longitude": 144.97256662538882
         },
-        "fillLevelPercentage": 13.42,
+        "fillLevelPercentage": 18.82,
         "status": "online",
-        "temperatureCelsius": 17.77
+        "temperatureCelsius": 17.7
     },
     {
         "binId": "BIN-008",
-        "timestamp": "2025-04-26T17:51:03.927707+00:00",
+        "timestamp": "2025-04-27T03:58:20.090848+00:00",
         "location": {
-            "latitude": -37.80831034805938,
-            "longitude": 144.94698727209604
+            "latitude": -37.81493217146411,
+            "longitude": 144.97296170020522
         },
-        "fillLevelPercentage": 12.0,
+        "fillLevelPercentage": 8.61,
         "status": "online",
-        "temperatureCelsius": 17.71
+        "temperatureCelsius": 23.09
     },
     {
         "binId": "BIN-009",
-        "timestamp": "2025-04-26T17:51:03.927719+00:00",
+        "timestamp": "2025-04-27T03:58:20.090863+00:00",
         "location": {
-            "latitude": -37.8196719846282,
-            "longitude": 144.95621103216547
+            "latitude": -37.81897143902012,
+            "longitude": 144.948686800301
         },
-        "fillLevelPercentage": 3.98,
+        "fillLevelPercentage": 11.89,
         "status": "online",
-        "temperatureCelsius": 19.65
+        "temperatureCelsius": 21.29
     },
     {
         "binId": "BIN-010",
-        "timestamp": "2025-04-26T17:51:03.927730+00:00",
+        "timestamp": "2025-04-27T03:58:20.090880+00:00",
         "location": {
-            "latitude": -37.8041200077063,
-            "longitude": 144.963537250164
+            "latitude": -37.807399268227215,
+            "longitude": 144.95955892373564
         },
-        "fillLevelPercentage": 5.68,
+        "fillLevelPercentage": 2.94,
         "status": "online",
-        "temperatureCelsius": 18.68
+        "temperatureCelsius": 24.23
     }
 ]

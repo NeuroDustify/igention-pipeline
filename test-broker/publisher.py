@@ -1,3 +1,4 @@
+# publisher.py
 import paho.mqtt.client as mqtt
 import time
 
@@ -18,4 +19,3 @@ while True:
     client.publish(topic, message)
     print(f"Published: {message}")
     time.sleep(2)  # Publish every 2 seconds
-
