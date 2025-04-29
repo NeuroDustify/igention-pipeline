@@ -29,7 +29,8 @@ def display_main_menu():
     print("2. Run Suburb Data Generator")
     print("3. Run MQTT Publisher")
     print("4. Run MQTT Subscriber")  # NEW: Option to run the subscriber
-    print("5. Exit")
+    print("5. Publish Suburb Data")
+    print("6. Exit")
     print("-" * 35)
 
 
@@ -56,6 +57,10 @@ def main():
             subscribe_data.main()  # Call the subscriber's main function
             print("\nMQTT Subscriber is running... (It will keep running until interrupted)")
         elif choice == '5':
+            print("\nPublishing Suburb Data...")
+            publish_suburb_data.main()  # Call the publisher for suburb data
+            print("\nSuburb Data Publisher finished.")
+        elif choice == '6':
             print("Exiting Smart Dustbin Project.")
             break
         else:
