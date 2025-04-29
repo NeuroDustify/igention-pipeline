@@ -33,8 +33,10 @@ def publish_bin_data(client: mqtt.Client, topic: str, data: list):
     """Publishes a list of bin data dictionaries to the specified MQTT topic in parallel."""
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         futures = []
-        for bin_data in data:
+        for i, bin_data in enumerate(data):
             futures.append(executor.submit(client.publish, topic, json.dumps(bin_data)))
+            progress = int((i + 1) / len(data) * 100)
+            print(f"\rPublishing bin data... {progress}%", end="")
         for future in concurrent.futures.as_completed(futures):
             future.result()
 
@@ -87,3 +89,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

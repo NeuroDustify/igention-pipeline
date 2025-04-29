@@ -1,277 +1,242 @@
 [
     {
-        "binId": "BIN-001",
-        "timestamp": "2025-04-27T16:48:50.533801+00:00",
+        "binId": "BIN_house_1745772492933_5430",
+        "timestamp": "2025-04-29T18:04:41.859491+00:00",
         "location": {
-            "latitude": -37.807336708719575,
-            "longitude": 144.9652692980917
+            "latitude": -37.80404421975324,
+            "longitude": 144.95461916488992
         },
-        "fillLevelPercentage": 16.74,
+        "fillLevelPercentage": 4.77,
         "status": "online",
-        "temperatureCelsius": 16.03
+        "temperatureCelsius": 22.23,
+        "linkedHouseId": "house_1745772492933_5430"
     },
     {
-        "binId": "BIN-002",
-        "timestamp": "2025-04-27T16:48:50.533920+00:00",
+        "binId": "BIN_house_1745772492934_5803",
+        "timestamp": "2025-04-29T18:04:41.859581+00:00",
         "location": {
-            "latitude": -37.81368762007204,
-            "longitude": 144.96688485016426
+            "latitude": -37.81318679056419,
+            "longitude": 144.95604114834825
         },
-        "fillLevelPercentage": 2.15,
+        "fillLevelPercentage": 8.1,
         "status": "online",
-        "temperatureCelsius": 24.29
+        "temperatureCelsius": 24.79,
+        "linkedHouseId": "house_1745772492934_5803"
     },
     {
-        "binId": "BIN-003",
-        "timestamp": "2025-04-27T16:48:50.533939+00:00",
+        "binId": "BIN_house_1745772492934_9646",
+        "timestamp": "2025-04-29T18:04:41.859597+00:00",
         "location": {
-            "latitude": -37.80392856856379,
-            "longitude": 144.96346867609893
+            "latitude": -37.80323407581149,
+            "longitude": 144.9559192148792
         },
-        "fillLevelPercentage": 2.59,
+        "fillLevelPercentage": 4.2,
         "status": "online",
-        "temperatureCelsius": 17.78
+        "temperatureCelsius": 15.51,
+        "linkedHouseId": "house_1745772492934_9646"
     },
     {
-        "binId": "BIN-004",
-        "timestamp": "2025-04-27T16:48:50.533954+00:00",
+        "binId": "BIN_house_1745772492934_7961",
+        "timestamp": "2025-04-29T18:04:41.859610+00:00",
         "location": {
-            "latitude": -37.804613103344394,
-            "longitude": 144.95517514961838
+            "latitude": -37.81272157536173,
+            "longitude": 144.94749077383702
         },
-        "fillLevelPercentage": 0.96,
+        "fillLevelPercentage": 12.69,
         "status": "online",
-        "temperatureCelsius": 22.39
+        "temperatureCelsius": 20.11,
+        "linkedHouseId": "house_1745772492934_7961"
     },
     {
-        "binId": "BIN-005",
-        "timestamp": "2025-04-27T16:48:50.533967+00:00",
+        "binId": "BIN_house_1745772492934_9200",
+        "timestamp": "2025-04-29T18:04:41.859625+00:00",
         "location": {
-            "latitude": -37.81522918731441,
-            "longitude": 144.95626550391623
+            "latitude": -37.80491071798403,
+            "longitude": 144.97493422633084
         },
-        "fillLevelPercentage": 18.8,
+        "fillLevelPercentage": 3.65,
         "status": "online",
-        "temperatureCelsius": 24.71
+        "temperatureCelsius": 19.43,
+        "linkedHouseId": "house_1745772492934_9200"
     },
     {
-        "binId": "BIN-006",
-        "timestamp": "2025-04-27T16:48:50.533993+00:00",
+        "binId": "BIN_house_1745772492934_6430",
+        "timestamp": "2025-04-29T18:04:41.859639+00:00",
         "location": {
-            "latitude": -37.8053056612741,
-            "longitude": 144.95475093702044
+            "latitude": -37.80790358951596,
+            "longitude": 144.95201087800075
         },
-        "fillLevelPercentage": 10.06,
+        "fillLevelPercentage": 11.2,
         "status": "online",
-        "temperatureCelsius": 16.4
+        "temperatureCelsius": 24.01,
+        "linkedHouseId": "house_1745772492934_6430"
     },
     {
-        "binId": "BIN-007",
-        "timestamp": "2025-04-27T16:48:50.534007+00:00",
+        "binId": "BIN_house_1745772492934_2440",
+        "timestamp": "2025-04-29T18:04:41.859710+00:00",
         "location": {
-            "latitude": -37.806668009363094,
-            "longitude": 144.967525767424
+            "latitude": -37.81745368437052,
+            "longitude": 144.95040734436185
         },
-        "fillLevelPercentage": 15.83,
+        "fillLevelPercentage": 15.2,
         "status": "online",
-        "temperatureCelsius": 23.59
+        "temperatureCelsius": 15.32,
+        "linkedHouseId": "house_1745772492934_2440"
     },
     {
-        "binId": "BIN-008",
-        "timestamp": "2025-04-27T16:48:50.534018+00:00",
+        "binId": "BIN_house_1745772492934_2048",
+        "timestamp": "2025-04-29T18:04:41.859743+00:00",
         "location": {
-            "latitude": -37.81334130701212,
-            "longitude": 144.95935622647605
+            "latitude": -37.80601194515637,
+            "longitude": 144.959379252769
         },
-        "fillLevelPercentage": 13.56,
+        "fillLevelPercentage": 11.71,
         "status": "online",
-        "temperatureCelsius": 19.46
+        "temperatureCelsius": 19.4,
+        "linkedHouseId": "house_1745772492934_2048"
     },
     {
-        "binId": "BIN-009",
-        "timestamp": "2025-04-27T16:48:50.534031+00:00",
+        "binId": "BIN_house_1745772492934_9728",
+        "timestamp": "2025-04-29T18:04:41.859763+00:00",
         "location": {
-            "latitude": -37.812346570530394,
-            "longitude": 144.9730498743833
+            "latitude": -37.80872220815626,
+            "longitude": 144.971316786285
         },
-        "fillLevelPercentage": 1.6,
+        "fillLevelPercentage": 17.27,
         "status": "online",
-        "temperatureCelsius": 16.57
+        "temperatureCelsius": 17.02,
+        "linkedHouseId": "house_1745772492934_9728"
     },
     {
-        "binId": "BIN-010",
-        "timestamp": "2025-04-27T16:48:50.534044+00:00",
+        "binId": "BIN_house_1745772492934_3225",
+        "timestamp": "2025-04-29T18:04:41.859774+00:00",
         "location": {
-            "latitude": -37.81885040099345,
-            "longitude": 144.97063532173664
+            "latitude": -37.80861259978562,
+            "longitude": 144.97436334383877
         },
-        "fillLevelPercentage": 2.19,
+        "fillLevelPercentage": 8.5,
         "status": "online",
-        "temperatureCelsius": 18.76
+        "temperatureCelsius": 18.23,
+        "linkedHouseId": "house_1745772492934_3225"
     },
     {
-        "binId": "BIN-011",
-        "timestamp": "2025-04-27T16:48:50.534056+00:00",
+        "binId": "BIN_house_1745772492934_8182",
+        "timestamp": "2025-04-29T18:04:41.859786+00:00",
         "location": {
-            "latitude": -37.80082870763638,
-            "longitude": 144.96745526735174
+            "latitude": -37.814553564902056,
+            "longitude": 144.95296397592338
         },
-        "fillLevelPercentage": 7.34,
+        "fillLevelPercentage": 11.89,
         "status": "online",
-        "temperatureCelsius": 20.86
+        "temperatureCelsius": 24.17,
+        "linkedHouseId": "house_1745772492934_8182"
     },
     {
-        "binId": "BIN-012",
-        "timestamp": "2025-04-27T16:48:50.534069+00:00",
+        "binId": "BIN_house_1745772492934_4267",
+        "timestamp": "2025-04-29T18:04:41.859803+00:00",
         "location": {
-            "latitude": -37.80594606714928,
-            "longitude": 144.96045264956268
+            "latitude": -37.80317866007757,
+            "longitude": 144.95286023599314
         },
-        "fillLevelPercentage": 16.25,
+        "fillLevelPercentage": 12.21,
         "status": "online",
-        "temperatureCelsius": 15.61
+        "temperatureCelsius": 24.04,
+        "linkedHouseId": "house_1745772492934_4267"
     },
     {
-        "binId": "BIN-013",
-        "timestamp": "2025-04-27T16:48:50.534080+00:00",
+        "binId": "BIN_house_1745772492934_9842",
+        "timestamp": "2025-04-29T18:04:41.859815+00:00",
         "location": {
-            "latitude": -37.819311310564764,
-            "longitude": 144.94788693730112
+            "latitude": -37.819521907178405,
+            "longitude": 144.95438892338848
         },
-        "fillLevelPercentage": 16.48,
+        "fillLevelPercentage": 12.67,
         "status": "online",
-        "temperatureCelsius": 21.08
+        "temperatureCelsius": 17.69,
+        "linkedHouseId": "house_1745772492934_9842"
     },
     {
-        "binId": "BIN-014",
-        "timestamp": "2025-04-27T16:48:50.534091+00:00",
+        "binId": "BIN_house_1745772492934_3577",
+        "timestamp": "2025-04-29T18:04:41.859826+00:00",
         "location": {
-            "latitude": -37.81298225400471,
-            "longitude": 144.95336929609834
+            "latitude": -37.8097703988155,
+            "longitude": 144.95445026872915
         },
-        "fillLevelPercentage": 11.99,
+        "fillLevelPercentage": 7.87,
         "status": "online",
-        "temperatureCelsius": 20.33
+        "temperatureCelsius": 24.51,
+        "linkedHouseId": "house_1745772492934_3577"
     },
     {
-        "binId": "BIN-015",
-        "timestamp": "2025-04-27T16:48:50.534104+00:00",
+        "binId": "BIN_house_1745772492934_6499",
+        "timestamp": "2025-04-29T18:04:41.859836+00:00",
         "location": {
-            "latitude": -37.80714556014967,
-            "longitude": 144.96743954030023
+            "latitude": -37.81536001256484,
+            "longitude": 144.95677642685024
         },
-        "fillLevelPercentage": 11.27,
+        "fillLevelPercentage": 1.96,
         "status": "online",
-        "temperatureCelsius": 18.61
+        "temperatureCelsius": 21.2,
+        "linkedHouseId": "house_1745772492934_6499"
     },
     {
-        "binId": "BIN-016",
-        "timestamp": "2025-04-27T16:48:50.534116+00:00",
+        "binId": "BIN_house_1745772492934_8057",
+        "timestamp": "2025-04-29T18:04:41.859846+00:00",
         "location": {
-            "latitude": -37.817702635501185,
-            "longitude": 144.9708010450031
+            "latitude": -37.81095773475568,
+            "longitude": 144.96897583128418
         },
-        "fillLevelPercentage": 0.57,
+        "fillLevelPercentage": 9.89,
         "status": "online",
-        "temperatureCelsius": 18.32
+        "temperatureCelsius": 23.37,
+        "linkedHouseId": "house_1745772492934_8057"
     },
     {
-        "binId": "BIN-017",
-        "timestamp": "2025-04-27T16:48:50.534127+00:00",
+        "binId": "BIN_house_1745772492934_6467",
+        "timestamp": "2025-04-29T18:04:41.859857+00:00",
         "location": {
-            "latitude": -37.816674852606305,
-            "longitude": 144.95002744149423
+            "latitude": -37.80908792343088,
+            "longitude": 144.96276927318246
         },
-        "fillLevelPercentage": 0.92,
+        "fillLevelPercentage": 9.49,
         "status": "online",
-        "temperatureCelsius": 20.97
+        "temperatureCelsius": 16.94,
+        "linkedHouseId": "house_1745772492934_6467"
     },
     {
-        "binId": "BIN-018",
-        "timestamp": "2025-04-27T16:48:50.534139+00:00",
+        "binId": "BIN_house_1745772492934_6767",
+        "timestamp": "2025-04-29T18:04:41.859867+00:00",
         "location": {
-            "latitude": -37.80566670072596,
-            "longitude": 144.9726675677893
+            "latitude": -37.80173599514416,
+            "longitude": 144.94607041151755
         },
-        "fillLevelPercentage": 7.73,
+        "fillLevelPercentage": 9.62,
         "status": "online",
-        "temperatureCelsius": 22.31
+        "temperatureCelsius": 16.47,
+        "linkedHouseId": "house_1745772492934_6767"
     },
     {
-        "binId": "BIN-019",
-        "timestamp": "2025-04-27T16:48:50.534149+00:00",
+        "binId": "BIN_house_1745772492934_9048",
+        "timestamp": "2025-04-29T18:04:41.859877+00:00",
         "location": {
-            "latitude": -37.80456910789024,
-            "longitude": 144.9507649455837
+            "latitude": -37.80948124612212,
+            "longitude": 144.96855394706688
         },
-        "fillLevelPercentage": 5.46,
+        "fillLevelPercentage": 8.29,
         "status": "online",
-        "temperatureCelsius": 21.3
+        "temperatureCelsius": 17.33,
+        "linkedHouseId": "house_1745772492934_9048"
     },
     {
-        "binId": "BIN-020",
-        "timestamp": "2025-04-27T16:48:50.534160+00:00",
+        "binId": "BIN_house_1745772492934_8353",
+        "timestamp": "2025-04-29T18:04:41.859898+00:00",
         "location": {
-            "latitude": -37.819393897496845,
-            "longitude": 144.95572455298932
+            "latitude": -37.803430095792514,
+            "longitude": 144.96137708039907
         },
-        "fillLevelPercentage": 13.81,
+        "fillLevelPercentage": 4.43,
         "status": "online",
-        "temperatureCelsius": 24.17
-    },
-    {
-        "binId": "BIN-021",
-        "timestamp": "2025-04-27T16:48:50.534173+00:00",
-        "location": {
-            "latitude": -37.80419383486043,
-            "longitude": 144.94987610209026
-        },
-        "fillLevelPercentage": 16.8,
-        "status": "online",
-        "temperatureCelsius": 16.68
-    },
-    {
-        "binId": "BIN-022",
-        "timestamp": "2025-04-27T16:48:50.534184+00:00",
-        "location": {
-            "latitude": -37.806457027309655,
-            "longitude": 144.94521421587189
-        },
-        "fillLevelPercentage": 17.59,
-        "status": "online",
-        "temperatureCelsius": 18.04
-    },
-    {
-        "binId": "BIN-023",
-        "timestamp": "2025-04-27T16:48:50.534196+00:00",
-        "location": {
-            "latitude": -37.80132499461123,
-            "longitude": 144.96231083529764
-        },
-        "fillLevelPercentage": 7.66,
-        "status": "online",
-        "temperatureCelsius": 16.78
-    },
-    {
-        "binId": "BIN-024",
-        "timestamp": "2025-04-27T16:48:50.534208+00:00",
-        "location": {
-            "latitude": -37.80152940631725,
-            "longitude": 144.9631043123138
-        },
-        "fillLevelPercentage": 6.71,
-        "status": "online",
-        "temperatureCelsius": 18.97
-    },
-    {
-        "binId": "BIN-025",
-        "timestamp": "2025-04-27T16:48:50.534219+00:00",
-        "location": {
-            "latitude": -37.802119508245354,
-            "longitude": 144.96621685920425
-        },
-        "fillLevelPercentage": 10.31,
-        "status": "online",
-        "temperatureCelsius": 21.44
+        "temperatureCelsius": 16.27,
+        "linkedHouseId": "house_1745772492934_8353"
     }
 ]
