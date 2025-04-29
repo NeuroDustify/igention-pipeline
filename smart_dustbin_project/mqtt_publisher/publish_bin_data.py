@@ -1,10 +1,12 @@
 # mqtt_publisher/publish_bin_data.py
-# Script to read generated bin data from JSON and publish to MQTT.
+# Script to read generated bin data from JSON and publish to MQTT in parallel.
 
 import paho.mqtt.client as mqtt
 import json
 import os
 import time
+import concurrent.futures
+
 
 # --- MQTT Configuration ---
 MQTT_BROKER_ADDRESS = "test.mosquitto.org"
@@ -28,10 +30,13 @@ def read_json_data(filepath: str) -> list:
 
 
 def publish_bin_data(client: mqtt.Client, topic: str, data: list):
-    """Publishes a list of bin data dictionaries to the specified MQTT topic."""
-    for bin_data in data:
-        client.publish(topic, json.dumps(bin_data))
-        time.sleep(0.5)  # Throttle publishing
+    """Publishes a list of bin data dictionaries to the specified MQTT topic in parallel."""
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+        futures = []
+        for bin_data in data:
+            futures.append(executor.submit(client.publish, topic, json.dumps(bin_data)))
+        for future in concurrent.futures.as_completed(futures):
+            future.result()
 
 
 # --- MQTT Callbacks ---
@@ -50,7 +55,7 @@ def on_disconnect(client, userdata, rc):
 
 # --- Main Function ---
 def main():
-    """Main function to connect to MQTT, publish bin data, and disconnect."""
+    """Main function to connect to MQTT, publish bin data in parallel, and disconnect."""
 
     client = mqtt.Client()
 
